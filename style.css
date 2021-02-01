@@ -18,10 +18,11 @@ body {
     padding: 1%;
     width: 100%;
     background-blend-mode: darken ;
-    background: rgb(185, 185, 185);
+    background: #CC2121;
   }
   
   .header h2 {
+    color: white;
     margin-left:7%;
   }
   
