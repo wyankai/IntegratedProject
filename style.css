@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color:#222;
-    background-color:rgb(241, 241, 241);
+    background-color:#FFFFFF;
   }
   
   
@@ -76,7 +76,39 @@ body {
     color: black;
   }
 
-  /*STYLING OF THE PROFILE PICTURE*/
-  .profilePicture{
-    width:10vw;
-  }
+/*STYLING OF THE PROFILE PICTURE*/
+
+.profileHeader{
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  align-content: center;
+}
+
+.profileHeader img{
+  width:10vw;
+  margin-left:38%;
+}
+
+.profileHeader p{
+  display:flex;
+  justify-content: center;
+}
+
+/*TABLE STYLING*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+td, th {
+  border-bottom: 3px solid #CC2121;
+  text-align: left;
+  padding: 20px;
+}
+
+/*tr:nth-child(even) {
+  background-color: #a0a0a0;
+}*/
