@@ -75,3 +75,8 @@ body {
     background-color: white;
     color: black;
   }
+
+  /*STYLING OF THE PROFILE PICTURE*/
+  .profilePicture{
+    width:10vw;
+  }
