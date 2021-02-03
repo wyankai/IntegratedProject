@@ -1,3 +1,70 @@
+//COVID STATS USING API
+//Start of evey js thing
+$(document).ready(function () {
+  //function to request info on sg cases 
+  function getCountry(country) {
+    //settings for the AJAX thing
+    var settings = {
+      "url": "https://disease.sh/v3/covid-19/countries/Singapore", 
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "Cookie": ""
+      },
+    };
+
+    //running an AJAX request with the settings above
+    $.ajax(settings).done(function (response) {
+      //console.log(response);
+      //get the data from this call and assign to vars
+      let totalCase = response.cases;
+      let nowCase = response.todayCases;
+      let totalDeath = response.deaths;
+      let nowDeath = response.todayDeaths;
+      let totalReco = response.recovered;
+      let nowReco = response.todayRecovered;
+
+      //create big thing to append later
+      //var addStat = '<p id = "now_Death"> Deaths today: ' + nowDeath + '</p>'
+      //console.log(addStat)
+      //$(".stat_box").append(addStat);
+
+      //test function
+      $(".total_case").append(totalCase);
+      $(".now_case").append(nowCase);
+      $(".total_death").append(totalDeath);
+      $(".now_death").append(nowDeath);
+      $(".total_reco").append(totalReco);
+      $(".now_reco").append(nowReco);
+
+
+    });
+  }
+
+  //calling the function
+  getCountry("Singapore")
+})
+
+$(document).ready(function () {
+  //function to store items into local storage
+  $(".btn-primary").on("click",function(e){
+      e.preventDefault();
+      console.log("hi");
+
+  });
+
+  //function based obj for contry list
+  function contCase (name,cases,death,reco) {
+      this.name = name;
+      this.cases = cases;
+      this.deaths = death;
+      this.reco = reco;
+
+  };
+
+
+});
+
 //LIGHT MODE AND DARK MODE CODE
 var darkMode;
 
