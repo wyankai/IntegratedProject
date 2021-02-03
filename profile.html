@@ -7,29 +7,23 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+       <!-- Add icon library -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- For theme buttons. Ajax to change the colour of the backgrounds etc -->
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
       <div class="header" >
-        <h2>Covid Quiz</h2>
+        <h2>My Profile</h2>
+        <a href = settings.html><i class="fa fa-cog "></i></a>
       </div>
   
       <section class="container">
   
         <!-- To run code the moment the website loads-->
         <body onLoad="toggleDarkMode()"></body>
-  
-          <!-- For navigation menu -->
-        <div class="topnav">
-          <a href = index.html>Home</a>
-          <a href = rewards.html >Rewards</a>
-          <a href = chat.html>Chat</a>
-          <a class="active">Profile</a>
-          <a href = settings.html>Setting</a>
-        </div>
 
         <div class= "body">
-            <div class="profileHeader">
+            <div class="profileBody">
                 <img class="profilePicture" src="Images/profile picture.png" alt="placeholderImage">
                 <p>John123</p>
                 <table>
@@ -55,6 +49,7 @@
                     </tr>
                 </table>
             </div>
+            <a class = "backBtn" href = index.html>Back</a>
         </div>
 
       </section>
