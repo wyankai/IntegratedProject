@@ -12,9 +12,9 @@
     <!-- For theme buttons. Ajax to change the colour of the backgrounds etc -->
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
-      <div class="header" >
+      <div class="header" id="indexHeader">
         <h2>Covid Quiz</h2>
-        <a style="float:right" href = settings.html><i class="fa fa-cog "></i></a>
+        <a href = settings.html><i class="fa fa-cog "></i></a>
       </div>
   
       <section class="container">
@@ -23,7 +23,7 @@
         <body onLoad="toggleDarkMode()"></body>
   
           <!-- For navigation menu -->
-        <div class="topnav">
+        <div class="nav">
           <a class = index.html><i class="fa fa-home "></i></a>
           <a href= rewards.html><i class="fa fa-gift "></i></a>
           <a href = chat.html><i class="fa fa-comment "></i></a>
@@ -31,20 +31,17 @@
         </div>
 
         <div class= "body">
-          <div class = "stat_box">
+          <!--<div class = "stat_box">
             <div class = "test">
                 <h2 class = "stat_title">Covid Info (Singapore)</h2>
             </div>        
-            <!--Cases-->
             <p class = "stat_p">Cases today: <span class = "now_case"></span> </p>
             <p class = "stat_p"> Cases total: <span class = "total_case"></span> </p>
-            <!--Deaths-->
             <p class = "stat_p">Deaths today: <span class = "now_death"></span> </p>
             <p class = "stat_p">Deaths total: <span class = "total_death"></span> </p>
-            <!--Reco-->
             <p class = "stat_p">Recoveries today: <span class = "now_reco"></span> </p>
             <p class = "stat_p">Recoveries total: <span class = "total_reco"></span> </p>
-          </div>
+          </div>-->
         </div>
 
       </section>
