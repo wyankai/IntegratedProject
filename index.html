@@ -7,45 +7,36 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-     <!-- Add icon library -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- For theme buttons. Ajax to change the colour of the backgrounds etc -->
-        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
-      <div class="header" id="indexHeader">
-        <h2>Covid Quiz</h2>
-        <a href = settings.html><i class="fa fa-cog "></i></a>
-      </div>
-  
-      <section class="container">
-  
-        <!-- To run code the moment the website loads-->
-        <body onLoad="toggleDarkMode()"></body>
-  
-          <!-- For navigation menu -->
-        <div class="nav">
-          <a class = index.html><i class="fa fa-home "></i></a>
-          <a href= rewards.html><i class="fa fa-gift "></i></a>
-          <a href = chat.html><i class="fa fa-comment "></i></a>
-          <a href = profile.html><i class="fa fa-user "></i></a>
-        </div>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <div class= "body">
-          <!--<div class = "stat_box">
-            <div class = "test">
-                <h2 class = "stat_title">Covid Info (Singapore)</h2>
-            </div>        
-            <p class = "stat_p">Cases today: <span class = "now_case"></span> </p>
-            <p class = "stat_p"> Cases total: <span class = "total_case"></span> </p>
-            <p class = "stat_p">Deaths today: <span class = "now_death"></span> </p>
-            <p class = "stat_p">Deaths total: <span class = "total_death"></span> </p>
-            <p class = "stat_p">Recoveries today: <span class = "now_reco"></span> </p>
-            <p class = "stat_p">Recoveries total: <span class = "total_reco"></span> </p>
-          </div>-->
-        </div>
+    <!-- Ajax to change the colour of the backgrounds for dark mode and light mode -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-      </section>
-  
+    <body onLoad="toggleDarkMode()"></body>
+
+    <!-- Header-->
+    <div class="header" id="indexHeader">
+      <h2>Covid Quiz</h2>
+      <a href = settings.html><i class="fa fa-cog "></i></a>
+    </div>
+
+    
+
+    <!--Map-->
+    <div class="map">
+      <a href =realMap.html class=mapBtn><i class ="fa fa-map"></i></a>
+      <img src ="Images/Map.png">
+    </div>
+    
+    <!--Navigation menu-->
+    <div class="homeNav">
+      <a href=index.html><i class="fa fa-home "></i></a>
+      <a href= rewards.html><i class="fa fa-gift "></i></a>
+      <a href = chat.html><i class="fa fa-comment "></i></a>
+      <a href = profile.html><i class="fa fa-user "></i></a>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

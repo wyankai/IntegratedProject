@@ -1,37 +1,75 @@
-/*STYLING OF THE WEBSITE'S BODY*/
-/*When light mode is on*/
+/*COMMON STYLING*/
+/*Colour of body in light mode*/
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color:#222;
-    background-color:#FFFFFF;
-  }
-  
-/*When dark mode is on*/  
-body.dark {
-  background-color:rgb(59, 59, 59);
-  color:#fff;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#222;
+  background-color:#FFFFFF;
 }
-    
-  
-/*HEADER */
+
+/*Colour of body in dark mode*/
+body.dark {
+background-color:rgb(59, 59, 59);
+color:#fff;
+}
+
 .header {
   padding: 1%;
   width: 100%;
-  background-blend-mode: darken ;
   background: #CC2121;
+  color:white;
   display: flex;
   flex-direction: row;
-  color: white;
+  position: sticky;
+  top:0;
+}
+.header a {
+  margin-top: 4%;
+  float: left;
+  color: #f2f2f2;
+  font-size: 30px;
+  margin-right:33%;
+  margin-left:2%;
+  float:left;
 }
 
-.header a{
-  color: white;
+/*INDEX.HTML*/
+/*Making Navigation Bar stay at location even after scrolling*/
+.homeNav {
+  position: sticky;
+  bottom:0;
+  width:100%;
+  display: flex;
+  flex-direction: row;   
+}
+
+.homeNav a {
+  float: left;
+  color: #f2f2f2;
+  background-color: #CC2121;
+  text-align: center;
+  font-size: 50px;
+  padding:10px 19px;
+}
+
+.map{
+  position: static;
+  margin:0 ;
+}
+
+.mapBtn{
+  top: 74px ;
+  right:0;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
   font-size: 30px;
 }
 
-
 #indexHeader h2 {
+  color: white;
+  display: flex;
   margin-left: 30%;
   margin-right:10%;
 }
@@ -40,36 +78,12 @@ body.dark {
   margin-top: 4%;
   float: left;
   color: #f2f2f2;
+  font-size: 30px;
   margin-right:10%;
+  float:right;
 }
 
-  /*FLEX BOX*/
-  .topnav{
-    width: 25%;
-  }
-  
-  
-  /* NAVIGATION BAR */
-  .nav {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    width: 100%;
-    bottom: 1px;
-  }
-  
-  .nav a {
-    float: left;
-    color: #f2f2f2;
-    background-color: #CC2121;
-    text-align: center;
-    text-decoration: none;
-    font-size: 50px;
-    padding:10px 19px;
-  }
-
-
+/*PROFILE.HTML*/
 /*STYLING OF THE PROFILE PICTURE*/
 
 .profileBody{
@@ -106,21 +120,60 @@ td, th {
   padding: 20px;
 }
 
-/*tr:nth-child(even) {
-  background-color: #a0a0a0;
-}*/
 
 .backBtn{
   color: white;
   background-color: #CC2121;
   border-radius: 8px;
   font-size: 22px;
+  position: absolute;
+  bottom: 0px;
   cursor: pointer;
   padding: 15px 40px;
   text-align: center;
   text-decoration: none;
   margin-left: 32% ;
 }
-.body{
-  padding:5px;
+
+/*SETTING.HTML*/
+.buttonContainer{
+  color: white;
+  background-color:#E0E0E0;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  text-decoration: none;
+  margin:5px ;
+  border:1px black solid;
+}
+
+.buttonContainer button{
+  font-size: 22px;
+  background-color:transparent;
+  border:none;
+}
+
+.complete-button{
+  color: white;
+  background-color:#E0E0E0;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  text-decoration: none;
+  margin:5px ;
+  border:1px black solid;
+}
+
+.backContainer{
+  display:flex;
+  flex-direction: row;
+}
+.backContainer a{
+  color: grey;
+  font-size: 30px;
+  margin-right: 10%;
+  margin-left:3%;
+  margin-top:4%;
 }
