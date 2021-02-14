@@ -5,6 +5,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color:#222;
   background-color:#FFFFFF;
+  width:320px;
+  align-self:center;
 }
 
 /*Colour of body in dark mode*/
@@ -176,4 +178,10 @@ td, th {
   margin-right: 10%;
   margin-left:3%;
   margin-top:4%;
+}
+
+.clickable{
+  border:3px black solid;
+  position: static;
+  margin:0 ;
 }
