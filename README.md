@@ -32,14 +32,20 @@ Go to localhost:3000
 
 ## Design Process
  
-The design is for the people who want to use a personalised to-do list.
-The website stores the user's input into the localStorage so that the User's data would not be lost the moment they reload the screen.
+The design is for the philanthrophis users who like to learn about the latest news about covid’19 in Singapore.
+The website uses Covid'19 API to display the statistics on the news in Singapore. The website also have a quiz to educate the players on Covid'19.
 
--As the creator of the websote, I want to create a platform for the users for them to store their daily todo-list as well as badges function and a quotes function to help motivate the users.
+The design is also for the socialiser users who like to help others for the points, recognition and other visible perks.
+The website have a chat function for the players to communicate with one another. Players can use the function to socialise as well as discuss the quiz answers to other players as well as give them advices.
+
+The design will appeal to consumer users who act on the system for the extrinsic rewards..
+In the application, when a user manages to complete a NPC’s request, they are given a reward. Some rewards include vouchers as well as gift cards. Consumer users that are not willing to use the app might act on the system for the extrinsic rewards.
+
+-As the creator of the websote, I want to create a platform for the users to learn about Covid as well as a rewards system to motivate them to learn about Covid'19.
 
 ## Features
 
-Feature 1: Interactive game map that allows the user to drag around the map, zoom in and out and interact with the masks and covid buttons which will pop up a bubble giving the users information.
+Feature 1: Game map that allows the user to interact with the masks and covid buttons which will pop up a bubble giving the users information.
 
 Feature 2: Statistic Function that help to show the number of cases that has happened, or happen today etc.
 
@@ -63,6 +69,14 @@ About this game: Users can learn more about the game through this setting featur
 
  
 ### Existing Features
+
+Feature 2: Statistic Function that help to show the number of cases that has happened, or happen today etc.
+
+Feature 7: Chat: Players can use the chat feature to socialise with people who are also playing the game and discuss the quiz answers. When the user manages to assist another player, they can earn more masks for helping others.
+
+Feature 9: Settings:<br>
+Dark mode: The dark mode allows the user to have a preference for how the game is displayed on their screen, they can choose to either have bright mode or dark mode for the app.<br>
+About this game: Users can learn more about the game through this setting feature. The purpose of the game will be explained and more information about the quizzes and rewards will be provided.
 
 
 ### Features Left to Implement
