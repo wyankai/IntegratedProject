@@ -1,69 +1,87 @@
-//COVID STATS USING API
-//Start of evey js thing
-$(document).ready(function () {
-  //function to request info on sg cases 
-  function getCountry(country) {
-    //settings for the AJAX thing
-    var settings = {
-      "url": "https://disease.sh/v3/covid-19/countries/Singapore", 
-      "method": "GET",
-      "timeout": 0,
-      "headers": {
-        "Cookie": ""
-      },
-    };
+//CHAT FUNCTION
+const chatForm = document.getElementById('chat-form');
+const chatMessages = document.querySelector('.chat-messages');
+const roomName = document.getElementById('room-name');
+const userList = document.getElementById('users');
 
-    //running an AJAX request with the settings above
-    $.ajax(settings).done(function (response) {
-      //console.log(response);
-      //get the data from this call and assign to vars
-      let totalCase = response.cases;
-      let nowCase = response.todayCases;
-      let totalDeath = response.deaths;
-      let nowDeath = response.todayDeaths;
-      let totalReco = response.recovered;
-      let nowReco = response.todayRecovered;
+// Get username and room from URL
+const { username, room } = Qs.parse(location.search, {
+  ignoreQueryPrefix: true,
+});
 
-      //create big thing to append later
-      //var addStat = '<p id = "now_Death"> Deaths today: ' + nowDeath + '</p>'
-      //console.log(addStat)
-      //$(".stat_box").append(addStat);
+const socket = io();
 
-      //test function
-      $(".total_case").append(totalCase);
-      $(".now_case").append(nowCase);
-      $(".total_death").append(totalDeath);
-      $(".now_death").append(nowDeath);
-      $(".total_reco").append(totalReco);
-      $(".now_reco").append(nowReco);
+// Join chatroom
+socket.emit('joinRoom', { username, room });
+
+// Get room and users
+socket.on('roomUsers', ({ room, users }) => {
+  outputRoomName(room);
+  outputUsers(users);
+});
 
 
-    });
+// Message from server
+socket.on('message', (message) => {
+  console.log(message);
+  outputMessage(message);
+
+  // Scroll down
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+});
+
+// Message submit
+chatForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Get message text
+  let msg = e.target.elements.msg.value;
+
+  msg = msg.trim();
+
+  if (!msg) {
+    return false;
   }
 
-  //calling the function
-  getCountry("Singapore")
-})
+  // Emit message to server
+  socket.emit('chatMessage', msg);
 
-$(document).ready(function () {
-  //function to store items into local storage
-  $(".btn-primary").on("click",function(e){
-      e.preventDefault();
-      console.log("hi");
-
-  });
-
-  //function based obj for contry list
-  function contCase (name,cases,death,reco) {
-      this.name = name;
-      this.cases = cases;
-      this.deaths = death;
-      this.reco = reco;
-
-  };
-
-
+  // Clear input
+  e.target.elements.msg.value = '';
+  e.target.elements.msg.focus();
 });
+
+// Output message to DOM
+function outputMessage(message) {
+  const div = document.createElement('div');
+  div.classList.add('message');
+  const p = document.createElement('p');
+  p.classList.add('meta');
+  p.innerText = message.username;
+  p.innerHTML += `<span>${message.time}</span>`;
+  div.appendChild(p);
+  const para = document.createElement('p');
+  para.classList.add('text');
+  para.innerText = message.text;
+  div.appendChild(para);
+  document.querySelector('.chat-messages').appendChild(div);
+}
+
+// Add room name to DOM
+function outputRoomName(room) {
+  roomName.innerText = room;
+}
+
+// Add users to DOM
+function outputUsers(users) {
+  userList.innerHTML = '';
+  users.forEach((user) => {
+    const li = document.createElement('li');
+    li.innerText = user.username;
+    userList.appendChild(li);
+  });
+}
+
 
 //LIGHT MODE AND DARK MODE CODE
 var darkMode;
@@ -186,12 +204,3 @@ document.getElementById("rewardsCollected").innerHTML = localStorage.getItem("re
 $('.about').on('click', function() {  
   $('.aboutGame').hide();
 });
-
-function myFunction() {
-  var x = document.getElementById("aboutGame");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
