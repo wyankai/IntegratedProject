@@ -8,8 +8,23 @@ Phone Website Link:
 Our integrated project is about a covid-19 themed phone application that aims to educate users about covid-19 in Singapore. The objective is to collect masks stranded around the Singapore map and use them to help people involved in a covid-19 cluster around the map too. In order to collect masks in the game, you will need to complete quizzes about covid-19 and earn a certain amount of masks depending on how much you scored on the quiz. By doing these quizzes, users can educate themselves about the virus. Once they complete their action of giving the masks to the NPCs, they will earn a reward that will open and reveal the voucher they have received. This application also has a chat feature with Singaporeans playing the game where you can help one another with the covid-19 quizzes.
 
 ## Usage
+Firstly, you have to download NodeJS and NPM on your computer
+
+Elaborate tutorial on how to download NodeJS and NPM on your computer:<br>
+https://youtu.be/X-FPCwZFU_8
+
+Secondly you have to open your command panel to run the NPM commands
+
+Elaborate tutorial on how to run NPM command on your computer:<br>
+https://youtu.be/8Rmj5UY5mJk
+
+
+NPM code needed for to access this project:
 ```
 npm install
+
+(Note that there might be vulnerability message after running npm install, ignore it and run the next code instead)
+
 npm run dev
 
 Go to localhost:3000
@@ -40,7 +55,7 @@ Feature 7: Chat: Players can use the chat feature to socialise with people who a
 
 Feature 8: Profile: Users can view their own profile to look at their statistics and also change their username.
 
-Feature 9:Settings:<br>
+Feature 9: Settings:<br>
 Dark mode: The dark mode allows the user to have a preference for how the game is displayed on their screen, they can choose to either have bright mode or dark mode for the app.<br>
 About this game: Users can learn more about the game through this setting feature. The purpose of the game will be explained and more information about the quizzes and rewards will be provided.
 
