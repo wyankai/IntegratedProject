@@ -180,8 +180,7 @@ td, th {
   margin-top:4%;
 }
 
-.clickable{
-  border:3px black solid;
-  position: static;
-  margin:0 ;
+
+#aboutGame{
+  color:black;
 }

@@ -183,22 +183,15 @@ if (localStorage.getItem(rewardsCollectedData)) {
 
 document.getElementById("rewardsCollected").innerHTML = localStorage.getItem("rewards");
 
-function show_image(src, width, height, alt) {
-  var img = document.createElement("img");
-  img.src = src;
-  img.width = width;
-  img.height = height;
-  img.alt = alt;
-  
-  // set the position
-  img.style.position = 'absolute';
-  img.style.top = 400 * Math.random() + 'px';
-  img.style.left = 200 * Math.random() + 'px';
-  img.className = "clickable"
+$('.about').on('click', function() {  
+  $('.aboutGame').hide();
+});
 
-  document.body.appendChild(img);
-}
-
-function loadRandom(){
-  show_image("http://placekitten.com/200/300", 200, 300, 'foo')
+function myFunction() {
+  var x = document.getElementById("aboutGame");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
