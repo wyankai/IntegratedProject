@@ -72,6 +72,10 @@ About this game: Users can learn more about the game through this setting featur
 
 Feature 2: Statistic Function that help to show the number of cases that has happened, or happen today etc.
 
+Feature 3:Quiz feature is the main action in the game where users do and complete quizzes about covid-19 and earn masks depending on the amount of correct answers they get. Questions are randomly generated for every quiz and are multiple-choice questions. Users have the option to quit the quiz or submit it.
+
+Feature 6: Reward list: The reward list displays all the possible rewards that the user can win, this feature is used mainly to inform them of the vouchers and motivate them to continue playing the game.
+
 Feature 7: Chat: Players can use the chat feature to socialise with people who are also playing the game and discuss the quiz answers. When the user manages to assist another player, they can earn more masks for helping others.
 
 Feature 9: Settings:<br>
