@@ -46,3 +46,26 @@ $('.light-button').on('click', function() {
 });
 
 
+//Quiz completed
+var quiz = 0;
+
+function initiateQuiz() {
+    var quizStr = localStorage.getItem("quiz");
+    if(quizStr == undefined){
+        localStorage.setItem("quiz", 0);
+        quiz = 0;
+    }else{
+        quiz = parseInt(quizStr);   
+    }
+    document.getElementById("quiz").innerHTML = quiz;
+}
+
+function doQuiz() {
+    quiz += 1;
+    localStorage.setItem("quiz", quiz);
+    document.getElementById("quiz").innerHTML = quiz;
+}
+
+document.getElementById("clickQuiz").onclick = doQuiz;
+initiateQuiz();
+

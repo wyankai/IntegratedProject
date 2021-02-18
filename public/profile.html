@@ -25,7 +25,7 @@
         <div class= "body">
             <div class="profileBody">
                 <img class="profilePicture" src="Images/profile picture.png" alt="placeholderImage">
-                <p><b>Guest123 </b>
+                  <p><a id="username"><b>Guest123</b></a></p>
                   <main class="join-main">
                     <form action="chat.html">
                       <div class="form-control">
@@ -34,7 +34,7 @@
                           type="text"
                           name="username"
                           id="username"
-                          placeholder="Enter new username..."
+                          placeholder="Enter chat username..."
                           required
                         />
                       </div>
@@ -45,7 +45,7 @@
                 <table>
                     <tr>
                         <td>Quiz Completed</td>
-                        <td id = "quizCompleted"></td>
+                        <td><p><a id="quiz">0</a></p></td>
                     </tr>
                     <tr>
                         <td>Mask Collected</td>
@@ -65,9 +65,11 @@
                     </tr>
                 </table>
             </div>
+            <!-- Button added so that the data can be properly displayed-->
+            <a href ="index.html" class="btnA" id="clickQuiz">Back</a>
+
             <a class = "backBtn" href = index.html>Back</a>
         </div>
-
       </section>
   
     <script src="js/script.js"></script>

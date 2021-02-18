@@ -85,11 +85,15 @@ var timer = {
     reset: function () {
         timer.time = 10;
         $("#timer").text(timer.time) // Sets the timer to refresh
+        document.getElementById('correctLottie').style.display = 'none'
+        document.getElementById('incorrectLottie').style.display = 'none'
     },
     start: function () {
         if (!clockRunning) {
             intervalId = setInterval(timer.countdown, 1000);
             clockRunning = true;
+            document.getElementById('correctLottie').style.display = 'none'
+            document.getElementById('incorrectLottie').style.display = 'none'
         };
 
     },
@@ -104,7 +108,6 @@ var timer = {
             timedOut++;
             timer.stop();
             $("#answerBox").hide();
-            $("#img").attr("src", "assets/images/time.gif") //play this gif when they run out of time
             $("#question").text("Oof, you ran out of time");
             answerTimer.start()
             //they timed out so do a timed out here
@@ -211,6 +214,7 @@ $("#startButton").on("click", function () {
     $("#startGame").hide();
     $("#questionBox").show(500);
     showQuestion();
+    document.getElementById('correctLottie').style.display = 'none'
 });
 
 //sets up answer buttons to respond to clicks
@@ -226,14 +230,14 @@ $(document).on("click", ".answer", function () {
     if (answer === correctAnswer) { //This checks if the answer is equal to the option attribute
         correct++ //iterate correct answers
         $("#question").text("You're right!");
+        document.getElementById('correctLottie').style.display = 'block'
         timer.stop(); // stop the timer
         answerTimer.start();// start the answer break timer
-
-
     }
     else {
         incorrect++ //iterate incorrect answer
         $("#question").text("Ooh, sorry you're wrong")
+        document.getElementById('incorrectLottie').style.display = 'block'
         timer.stop(); // stop the timer
         answerTimer.start(); // start the break timer
     }

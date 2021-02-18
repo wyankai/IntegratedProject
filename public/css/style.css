@@ -225,13 +225,11 @@ a {
 	background-color: #CC2121;
 	border-radius: 8px;
 	font-size: 22px;
-	position: absolute;
-	bottom: 0px;
 	cursor: pointer;
 	padding: 15px 40px;
 	text-align: center;
 	text-decoration: none;
-	margin-left: 32% ;
+	margin-left: 33%;
   }
   
   /*SETTING.HTML*/
@@ -294,23 +292,6 @@ a {
 	margin-bottom: 150px;	
 }
 
-* {
-    text-align: center;
-    color: white;
-}
-
-html,
-body{
-    height: 100%;
-}
-
-.btn{
-    background: red;
-    color:white;
-    opacity: 0.8;
-    transition: 0.3s;
-    border: red;
-}
 .btn:hover {opacity:1}
 
 .row {
@@ -347,9 +328,6 @@ h1 {
     margin-top: 20px;
 }
 
-#questionBox {
-    padding: 20px;
-}
 
 span {
     margin-right: 20px;
@@ -380,9 +358,6 @@ span {
     margin-left: auto;
 }
 
-#playAgain{
-    margin-top:55px;
-}
 #stats{
     padding:20px;
 }
@@ -391,6 +366,20 @@ span {
     justify-content: center;
 }
 
-p{
-    font-size: 25px;
+#startButton{
+	margin-top: 250px;
+}
+
+.btnA{
+	display:none;
+}
+
+.maskBtn img{
+	top: 400px ;
+	right: 70px ;
+	position: absolute;
+	height:70px;
+	background-color: lightgreen;
+	background-blend-mode: multiply;
+	border-radius: 30px;
 }
