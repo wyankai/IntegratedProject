@@ -1,4 +1,3 @@
-//CHAT FUNCTION
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
@@ -19,7 +18,6 @@ socket.on('roomUsers', ({ room, users }) => {
   outputRoomName(room);
   outputUsers(users);
 });
-
 
 // Message from server
 socket.on('message', (message) => {
@@ -82,3 +80,11 @@ function outputUsers(users) {
   });
 }
 
+//Prompt the user before leave chat room
+document.getElementById('leave-btn').addEventListener('click', () => {
+  const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
+  if (leaveRoom) {
+    window.location = '../index.html';
+  } else {
+  }
+});

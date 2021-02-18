@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Covid Quiz</title>
+</head>
+
+<body>
+    <div class="header" id="indexHeader">
+        <h2>Covid Quiz</h2>
+    </div>
+    <div id="gamebg">
+        <div class=container id="game">           
+            <div class="row" id="results">
+                <div id="timerBox" class="col-md-12">
+                    <p class="timeBox">Time Remaining</p>
+                    <p id="timer" class="timeBox">10</p>
+                </div>
+                <div class="stats col-md-6">
+                    <p id="correct"></p>
+                    <p id="incorrect"></p>
+                    <p id="timeOut"></p>
+                    <p id="masks"></p>
+                </div>
+                <div class="stats col-md-6">
+
+
+                    <a href ="index.html" class="btn">Back</a>
+
+                </div>
+            </div>
+            <!--End of result screen-->
+
+
+            <div class="row" id="questionBox">
+                <div class="col-md-6">
+                    <h1 id="question">?</h1>
+                </div>
+            </div>
+            <div id="answerBox" class="row">
+                <span id="firstButton">
+                    <button id="A" class="btn answer" option="A">A</button>
+                </span>
+                <span>
+                    <button id="B" class="btn answer" option="B">B</button>
+                </span>
+                <span>
+                    <button id="C" class="btn answer" option="C">C</button>
+                </span>
+                <span id="lastButton">
+                    <button id="D" class="btn answer" option="D">D</button>
+                </span>
+            </div>
+        </div>
+        <div id="startGame">
+            <button class="btn" id="startButton">Click Here to start the quiz!</button>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
