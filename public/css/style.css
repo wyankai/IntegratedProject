@@ -279,6 +279,7 @@ a {
 	color:black;
   }
 
+/* Reward Images */
 .rewardPicture{
 	display:block;
 	height:auto;
@@ -382,5 +383,30 @@ span {
 }
 
 #maskBtn img{
+	height:70px;
+}
+
+#maskBtnA{
+	position: absolute;
+	background-color: lightgreen;
+	background-blend-mode: multiply;
+	border-radius: 30px;
+}
+
+#maskBtnA img{
+	height:70px;
+}
+
+#missionBtn{
+	background-color: lightsalmon;
+	background-blend-mode: multiply;
+	border-radius: 40px;
+	position: absolute;
+    top:285px;
+    right:120px;
+}
+
+#missionBtn img{
+	
 	height:70px;
 }

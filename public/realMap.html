@@ -8,6 +8,24 @@
     <title>News</title>
   </head>
   <body>
+
+    <style>
+      input{
+        display :none;
+      }
+
+      .btn {
+	      text-decoration: none;
+        float: left;
+        color: #f2f2f2;
+        background-color: #CC2121;
+        text-align: center;
+        font-size: 50px;
+        padding:10px 19px;
+      }
+
+    </style>
+
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -47,7 +65,22 @@
     <div class="homeNav">
       <a href = "index.html"><i class="fa fa-home "></i></a>
       <a href= rewards.html><i class="fa fa-gift "></i></a>
-      <a href = chat.html><i class="fa fa-comment "></i></a>
+      <main class="join-main">
+        <form action="chat.html">
+          <div class="form-control">
+            <label for="username"></label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value ="Guest123"
+              placeholder="Enter chat username..."
+              required
+            />
+          </div>
+          <button type="submit" class="btn"><i class="fa fa-comment "></i></button>
+        </form>
+      </main>  
       <a href = profile.html><i class="fa fa-user "></i></a>
     </div>
 

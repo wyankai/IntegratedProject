@@ -41,6 +41,10 @@
                       <button type="submit" class="btn">Submit</button>
                     </form>
                   </main>
+
+                  <input type="text" id="username" name="username"> 
+                  <button id="save">save</button>
+                  <button id="load">load</button>
                 
                 <table>
                     <tr>
@@ -71,6 +75,37 @@
             <a class = "backBtn" href = index.html>Back</a>
         </div>
       </section>
+
+      <script>
+        $('#save').on('click', function(){
+          $('input[type="text"]').each(function(){    
+              var id = $(this).attr('id');
+              var value = $(this).val();
+            localStorage.setItem(id, value);
+              
+          });   
+        });
+
+        $('#load').on('click', function(){
+          $('input[type="text"]').each(function(){    
+              var id = $(this).attr('id');
+              var value = localStorage.getItem(id);
+              
+              $(this).val(value);
+              
+          }); 
+        });
+
+        function load(){
+          $('input[type="text"]').each(function(){    
+              var id = $(this).attr('id');
+              var value = localStorage.getItem(id);
+              
+              $(this).val(value);
+              
+          }); 
+        };
+      </script>
   
     <script src="js/script.js"></script>
     <script src="js/chat.js"></script>

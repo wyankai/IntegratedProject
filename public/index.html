@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <style>
+      input{
+        display :none;
+      }
+
+      .btn {
+	      text-decoration: none;
+        float: left;
+        color: #f2f2f2;
+        background-color: #CC2121;
+        text-align: center;
+        font-size: 50px;
+        padding:10px 19px;
+      }
+    </style>
+
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -25,7 +41,9 @@
     <!--Map-->
     <div class="map">
       
-      <a href =quiz.html class= maskBtn id=maskBtn><img src="Images/masks.png"></a>
+      <a href =quiz.html class= maskBtn id =maskBtnA><img src="Images/masks.png"></a>
+      <a href =quiz.html class= maskBtn id= maskBtn><img src="Images/masks.png"></a>
+      <a class= missionBtn id= missionBtn><img src="Images/germs.png"></a>
       <a href =realMap.html class=mapBtn><i class ="fa fa-line-chart"></i></a>
       <img src ="Images/Map.png">
     </div>
@@ -35,15 +53,34 @@
     <div class="homeNav">
       <a href=index.html><i class="fa fa-home "></i></a>
       <a href= rewards.html><i class="fa fa-gift "></i></a>
-      <a href = chat.html><i class="fa fa-comment "></i></a>
+      <main class="join-main">
+        <form action="chat.html">
+          <div class="form-control">
+            <label for="username"></label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter chat username..."
+              required
+            />
+          </div>
+          <button type="submit" class="btn"><i class="fa fa-comment "></i></button>
+        </form>
+      </main>  
       <a href = profile.html><i class="fa fa-user "></i></a>
     </div>
 
     <script>
       //Randomly position mask button
       var btn = document.getElementById("maskBtn");
-      btn.style.top = Math.floor((Math.random() * 350) + 1) + "px";
+      btn.style.top = Math.floor((Math.random() * 390) + 1) + "px";
       btn.style.left = Math.floor((Math.random() * 200) + 1) + "px";
+
+      var btnA = document.getElementById("maskBtnA");
+      btnA.style.top = Math.floor((Math.random() * 390) + 1) + "px";
+      btnA.style.left = Math.floor((Math.random() * 200) + 1) + "px";
+
     </script>
 
     <script src="js/script.js"></script>
