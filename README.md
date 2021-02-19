@@ -2,7 +2,7 @@
 
 Name: Nur Latifah Bte Ajenan and Wee Yan Kai <br>
 Student Number: S10204552, S10206089C <br>
-Phone Website Link: https://wyankai.github.io/IntegratedProject/
+Phone Website Link: https://chatcord-1.wyankai.repl.co/index.html
 
 # Covid Quiz
 Our integrated project is about a covid-19 themed phone application that aims to educate users about covid-19 in Singapore. The objective is to collect masks stranded around the Singapore map and use them to help people involved in a covid-19 cluster around the map too. In order to collect masks in the game, you will need to complete quizzes about covid-19 and earn a certain amount of masks depending on how much you scored on the quiz. By doing these quizzes, users can educate themselves about the virus. Once they complete their action of giving the masks to the NPCs, they will earn a reward that will open and reveal the voucher they have received. This application also has a chat feature with Singaporeans playing the game where you can help one another with the covid-19 quizzes.
@@ -147,7 +147,7 @@ End Result(Success): Quiz should show the number of incorrect, correct and timed
    3. Statistics of the profile page should change; quiz completed increase as well aas the number of masks earned
    
 Expected Result: Quiz completed increase and number of mask earned increased.<br>
-End Result(Success): Quiz completed increase and number of mask earned increased.<br>
+End Result(FAIL): Quiz completed increase only.<br>
 <br>
 
 4. Settings:
@@ -212,6 +212,7 @@ End Result(Success): Username should be updated and sending a message will show 
 
 
 ### Bugs
+1. Information on the profile page is not fully implemented and username has to be input to use the chat function.
 
 ## Credits
 Icon stylesheet taken from :
