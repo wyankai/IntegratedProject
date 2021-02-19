@@ -7,6 +7,9 @@ Phone Website Link:
 # Covid Quiz
 Our integrated project is about a covid-19 themed phone application that aims to educate users about covid-19 in Singapore. The objective is to collect masks stranded around the Singapore map and use them to help people involved in a covid-19 cluster around the map too. In order to collect masks in the game, you will need to complete quizzes about covid-19 and earn a certain amount of masks depending on how much you scored on the quiz. By doing these quizzes, users can educate themselves about the virus. Once they complete their action of giving the masks to the NPCs, they will earn a reward that will open and reveal the voucher they have received. This application also has a chat feature with Singaporeans playing the game where you can help one another with the covid-19 quizzes.
 
+<b>IMPORTANT NOTE: THE CHAT BUTTON WOULD NOT REDIRECT YOU TO THE CHAT PAGE IF YOU ARE NOT CONNECTED TO THE SERVER.<br>
+THIS IS MADE SO THAT THE USERS WILL NOT THINK THAT THERE IS A ERROR IN THE CODE AND REALISED THAT THEY DID NOT CONNECT TO THE SERVER.</b>
+
 ## Usage
 Firstly, you have to download NodeJS and NPM on your computer
 
@@ -110,7 +113,10 @@ Feature 8: Profile: Users can view their own profile to look at their statistics
   - The project uses the Covid'19 API to diplay information about Covid'19 cases in Singapore.
 
 - Node.JS
-  - The project uses Node.JS server for the chat function of the website
+  - The project uses Node.JS server for the chat function of the website. Information is taken from the package and a server is created for the chatt.
+
+-localStorage
+ - localStorage is used to save the user's information.
 
 
 ## Testing
@@ -122,6 +128,9 @@ Feature 8: Profile: Users can view their own profile to look at their statistics
 Icon stylesheet taken from :
 - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css <br>
 
+Chat function is adapted from :
+- https://www.npmjs.com/package/chatcord <br>
+
 
 Ajax function to change the background of the body is taken from: 
 - https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js<br>
@@ -131,5 +140,6 @@ Ajax function to change the background of the body is taken from:
 
 ### Acknowledgements
 
-- I received inspiration for this project from Deepak Kumar's JavaScript Fetch API - Quote Generator Video.
+- I received inspiration for this the statistics function from the Interactive Developement supplementary classes recording.
+- I used the chatcord function for the application's chat function.
 
