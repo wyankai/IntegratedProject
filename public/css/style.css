@@ -374,12 +374,13 @@ span {
 	display:none;
 }
 
-.maskBtn img{
-	top: 400px ;
-	right: 70px ;
+#maskBtn{
 	position: absolute;
-	height:70px;
 	background-color: lightgreen;
 	background-blend-mode: multiply;
 	border-radius: 30px;
+}
+
+#maskBtn img{
+	height:70px;
 }

@@ -25,7 +25,7 @@
     <!--Map-->
     <div class="map">
       
-      <a href =quiz.html class= maskBtn><img src="Images/masks.png"></a>
+      <a href =quiz.html class= maskBtn id=maskBtn><img src="Images/masks.png"></a>
       <a href =realMap.html class=mapBtn><i class ="fa fa-line-chart"></i></a>
       <img src ="Images/Map.png">
     </div>
@@ -39,7 +39,15 @@
       <a href = profile.html><i class="fa fa-user "></i></a>
     </div>
 
+    <script>
+      //Randomly position mask button
+      var btn = document.getElementById("maskBtn");
+      btn.style.top = Math.floor((Math.random() * 350) + 1) + "px";
+      btn.style.left = Math.floor((Math.random() * 200) + 1) + "px";
+    </script>
+
     <script src="js/script.js"></script>
     <script src="js/chat.js"></script>
+
   </body>
 </html>
