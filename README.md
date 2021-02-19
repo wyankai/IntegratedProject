@@ -185,26 +185,26 @@ End Result(Success): Message is shown with the username and time sent<br>
 <br>
 
 8. Multiple-user Chat:
-  1. Open the chat in another tab
-  2. Send a message to the chat
-  3. Switch back to the tab that you used to test #7.
+    1. Open the chat in another tab
+    2. Send a message to the chat
+    3. Switch back to the tab that you used to test #7.
 
 Expected Result:Entry message will be shown as well as the message sent by the new tab is shown with the username and time sent<br>
 End Result(Success): Entry message will be shown as well as the message sent by the new tab is shown with the username and time sent<br>
 <br>
 
 9. Changing of the username:
-  1. Press the profile button.
-  2. Press the icon next to the username.
-  3. Change the username.
+    1. Press the profile button.
+    2. Press the icon next to the username.
+    3. Change the username.
 
 Expected Result:Username should be updated and reloading will not change the new username<br>
 End Result(Success): Username is updated and reloading will not change the new username<br>
 <br>
 
 10. Changing of the username part 2:
-  1. After changing the username, go to the chat page by pressing the chat button.
-  2. Try sending a message
+    1. After changing the username, go to the chat page by pressing the chat button.
+    2. Try sending a message
 
 Expected Result: Username should be updated and sending a message will show the new username<br>
 End Result(Success): Username should be updated and sending a message will show the new username<br>
