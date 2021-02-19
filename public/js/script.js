@@ -1,3 +1,6 @@
+//THE CHAT FUNCTION AND THE NORMAL SCRIPT ARE PLACED INTO DIFFERENT FILES AS THE CODES WILL CLASH, CAUSING EITHER THE 
+//CHAT FUNCTION NOT TO WORK OR THE OTHER PAGE SCRIPT TO NOT WORK.
+
 //LIGHT MODE AND DARK MODE CODE
 var darkMode;
 
@@ -283,47 +286,53 @@ $('.light-button').on('click', function() {
     //else they answered it wrong so keep talley of that
   });
 
-  //Quiz completed
-  var quiz = 0;
-  var mask = 0;
+//Quiz completed
+var quiz = 0;
+var mask = 4;
 
-  function initiateQuiz() {
-      var quizStr = localStorage.getItem("quiz");
-      if(quizStr == undefined){
-          localStorage.setItem("quiz", 0);
-          quiz = 0;
-      }else{
-          quiz = parseInt(quizStr);   
-      }
-      document.getElementById("quiz").innerHTML = quiz;
-  }
+function initiateQuiz() {
+    var quizStr = localStorage.getItem("quiz");
+    if(quizStr == undefined){
+        localStorage.setItem("quiz", 0);
+        quiz = 0;
+    }else{
+        quiz = parseInt(quizStr);   
+    }
+    document.getElementById("quiz").innerHTML = quiz;
+}
 
-  function initiateMask() {
-        var maskStr = localStorage.getItem("mask");
-        if(maskStr == undefined){
-            localStorage.setItem("mask", 0);
-            mask = 0;
-        }else{
-            mask = parseInt(maskStr);   
-        }
-        document.getElementById("mask").innerHTML = mask;   
-   }
+function initiateMask() {
+    var maskStr = localStorage.getItem("mask");
+    if(maskStr == undefined){
+        localStorage.setItem("mask", 4);
+        mask = 4;
+    }else{
+        mask = parseInt(maskStr);   
+    }
+    document.getElementById("mask").innerHTML = mask;   
+}
 
-  function doQuiz() {
+function doQuiz() {
     quiz += 1;
     localStorage.setItem("quiz", quiz);
     document.getElementById("quiz").innerHTML = quiz; 
-    doMask();
-  }
-
-  function doMask() {
     mask += 4;
     localStorage.setItem("mask", mask);
     document.getElementById("mask").innerHTML = mask; 
-  }
+}
 
+function doMask() {
+    mask += 4;
+    localStorage.setItem("mask", mask);
+    document.getElementById("mask").innerHTML = mask; 
+}
 
+initiateQuiz();
+initiateMask();
 
-  document.getElementById("clickQuiz").onclick = doQuiz;
-  initiateQuiz();
-  initiateMask();
+function doMission() {
+    mask -= 3;
+    localStorage.setItem("mask", mask);
+    document.getElementById("mask").innerHTML = mask; 
+    
+}

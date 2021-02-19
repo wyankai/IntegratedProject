@@ -1,3 +1,6 @@
+//THE CHAT FUNCTION AND THE NORMAL SCRIPT ARE PLACED INTO DIFFERENT FILES AS THE CODES WILL CLASH, CAUSING EITHER THE 
+//CHAT FUNCTION NOT TO WORK OR THE OTHER PAGE SCRIPT TO NOT WORK.
+
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');

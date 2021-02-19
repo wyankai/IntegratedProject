@@ -34,18 +34,25 @@
 
     <a href =quiz.html class= maskBtn id =maskBtnA><img src="Images/masks.png"></a>
     <a href =quiz.html class= maskBtn id= maskBtn><img src="Images/masks.png"></a>
+    
 
     <!-- Header-->
     <div class="header" id="indexHeader">
       <h2>Covid Quiz</h2>
       <a href = settings.html><i class="fa fa-cog "></i></a>
     </div>
-
+    
     <!--Map-->
     <div class="map">
       <a class= missionBtn id= missionBtn><img src="Images/germs.png"></a>
+      <div id="mission">
+        <p>A covid cluster has appeared! Provide 3 masks to help the people there</p>
+        <a href="collect.html" id=sendHelp onclick ="doMission()">Send Help!</a>
+      </div>
       <a href =realMap.html class=mapBtn><i class ="fa fa-line-chart"></i></a>
       <img src ="Images/Map.png">
+
+      
     </div>
     
     
@@ -74,7 +81,11 @@
       
       
       <a href = profile.html id="load"><i class="fa fa-user "></i></a>
+
+      
     </div>
+
+
 
     <script>
       //Randomly position mask button
@@ -86,6 +97,16 @@
       btnA.style.top = Math.floor((Math.random() * 390) + 100) + "px";
       btnA.style.left = Math.floor((Math.random() * 200) + 1) + "px";
 
+      $('#missionBtn').on('click', function(){
+          var x = document.getElementById("mission");
+          if (window.getComputedStyle(x).display === "none") {
+            x.style.display = "block";
+          }
+          else{
+            x.style.display = "none";
+          }
+        });
+
       //To load username and enter the chat
       $('#load').on('click', function(){
           $('input[type="text"]').each(function(){    
@@ -95,7 +116,7 @@
               $(this).val(value);
               
           }); 
-        });
+      });
 
     </script>
 

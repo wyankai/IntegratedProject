@@ -407,7 +407,6 @@ span {
 }
 
 #missionBtn img{
-	
 	height:70px;
 }
 
@@ -427,5 +426,18 @@ span {
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: pink;
 	font-size: 25px;
+}
+
+#mission{
+	position: absolute;
+    top:200px;
+    right:30px;
+	background-color: pink;
+	border: 1px solid black;
+	width:250px;
+	padding:10px;
+	display:none;
+	color: black;
+	text-align: center;
 }
 
