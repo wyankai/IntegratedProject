@@ -32,6 +32,9 @@
     <body onLoad="loadRandom()"></body>
     <body onLoad="toggleDarkMode()"></body>
 
+    <a href =quiz.html class= maskBtn id =maskBtnA><img src="Images/masks.png"></a>
+    <a href =quiz.html class= maskBtn id= maskBtn><img src="Images/masks.png"></a>
+
     <!-- Header-->
     <div class="header" id="indexHeader">
       <h2>Covid Quiz</h2>
@@ -40,9 +43,6 @@
 
     <!--Map-->
     <div class="map">
-      
-      <a href =quiz.html class= maskBtn id =maskBtnA><img src="Images/masks.png"></a>
-      <a href =quiz.html class= maskBtn id= maskBtn><img src="Images/masks.png"></a>
       <a class= missionBtn id= missionBtn><img src="Images/germs.png"></a>
       <a href =realMap.html class=mapBtn><i class ="fa fa-line-chart"></i></a>
       <img src ="Images/Map.png">
@@ -53,6 +53,8 @@
     <div class="homeNav">
       <a href=index.html><i class="fa fa-home "></i></a>
       <a href= rewards.html><i class="fa fa-gift "></i></a>
+
+      <!--For Chat NodeJS-->
       <main class="join-main">
         <form action="chat.html">
           <div class="form-control">
@@ -61,25 +63,39 @@
               type="text"
               name="username"
               id="username"
+              value ="Guest123"
               placeholder="Enter chat username..."
               required
             />
           </div>
-          <button type="submit" class="btn"><i class="fa fa-comment "></i></button>
+          <button type="submit" class="btn" id="load"><i class="fa fa-comment "></i></button>
         </form>
-      </main>  
-      <a href = profile.html><i class="fa fa-user "></i></a>
+      </main> 
+      
+      
+      <a href = profile.html id="load"><i class="fa fa-user "></i></a>
     </div>
 
     <script>
       //Randomly position mask button
       var btn = document.getElementById("maskBtn");
-      btn.style.top = Math.floor((Math.random() * 390) + 1) + "px";
+      btn.style.top = Math.floor((Math.random() * 450) + 100) + "px";
       btn.style.left = Math.floor((Math.random() * 200) + 1) + "px";
 
       var btnA = document.getElementById("maskBtnA");
-      btnA.style.top = Math.floor((Math.random() * 390) + 1) + "px";
+      btnA.style.top = Math.floor((Math.random() * 390) + 100) + "px";
       btnA.style.left = Math.floor((Math.random() * 200) + 1) + "px";
+
+      //To load username and enter the chat
+      $('#load').on('click', function(){
+          $('input[type="text"]').each(function(){    
+              var id = $(this).attr('id');
+              var value = localStorage.getItem(id);
+              
+              $(this).val(value);
+              
+          }); 
+        });
 
     </script>
 

@@ -70,6 +70,8 @@ About this game: Users can learn more about the game through this setting featur
  
 ### Existing Features
 
+Feature 1: Game map that allows the user to interact with the masks and covid buttons which will pop up a bubble giving the users information.
+
 Feature 2: Statistic Function that help to show the number of cases that has happened, or happen today etc.
 
 Feature 3:Quiz feature is the main action in the game where users do and complete quizzes about covid-19 and earn masks depending on the amount of correct answers they get. Questions are randomly generated for every quiz and are multiple-choice questions. Users have the option to quit the quiz or submit it.
@@ -84,6 +86,12 @@ About this game: Users can learn more about the game through this setting featur
 
 
 ### Features Left to Implement
+
+Feature 4:Give masks: When the user has obtained a number of masks, they can interact with the covid button on the game map to give masks to the NPCs in the game. They will have to give away a specific amount of masks in order to achieve the reward.
+
+Feature 5: Reward: Users will get a reward in a gift form. They will have to tap it to open it which reveals various types of vouchers that they might get. The vouchers are real and users can redeem them by proceeding to the store and showing them their screen.
+
+Feature 8: Profile: Users can view their own profile to look at their statistics and also change their username.
 
 
 ## Technologies Used

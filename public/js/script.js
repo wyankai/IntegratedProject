@@ -45,6 +45,7 @@ $('.light-button').on('click', function() {
   $("#light-button").hide();  
 });
 
+
 //Quiz
 //Variables here
   var trivia = [
@@ -204,8 +205,7 @@ $('.light-button').on('click', function() {
         $("#timeOut").text("You timed out on " + timedOut + " questions!");
         $("#masks").text("You received " + correct + " masks!");
         $("#questionBox").hide();
-        $("#timerBox").hide();
-        
+        $("#timerBox").hide(); 
     }
     else {
         $("#question").text(trivia[questionNumber].question) //Shows current question
@@ -246,6 +246,7 @@ $('.light-button').on('click', function() {
     $("#questionBox").show(500);
     showQuestion();
     document.getElementById('correctLottie').style.display = 'none'
+    
   });
 
   //sets up answer buttons to respond to clicks
@@ -284,7 +285,7 @@ $('.light-button').on('click', function() {
 
   //Quiz completed
   var quiz = 0;
-  var mask = 0
+  var mask = 0;
 
   function initiateQuiz() {
       var quizStr = localStorage.getItem("quiz");
@@ -295,24 +296,34 @@ $('.light-button').on('click', function() {
           quiz = parseInt(quizStr);   
       }
       document.getElementById("quiz").innerHTML = quiz;
-
-      var masksStr = localStorage.getItem("masks");
-      if(masksStr == undefined){
-          localStorage.setItem("masks", 0);
-          masks = 0;
-      }else{
-          masks = parseInt(masksStr);   
-      }
-      document.getElementById("masks").innerHTML = masks;
   }
+
+  function initiateMask() {
+        var maskStr = localStorage.getItem("mask");
+        if(maskStr == undefined){
+            localStorage.setItem("mask", 0);
+            mask = 0;
+        }else{
+            mask = parseInt(maskStr);   
+        }
+        document.getElementById("mask").innerHTML = mask;   
+   }
 
   function doQuiz() {
-      quiz += 1;
-      localStorage.setItem("quiz", quiz);
-      document.getElementById("quiz").innerHTML = quiz;
-      console.log(correct)
+    quiz += 1;
+    localStorage.setItem("quiz", quiz);
+    document.getElementById("quiz").innerHTML = quiz; 
+    doMask();
   }
+
+  function doMask() {
+    mask += 4;
+    localStorage.setItem("mask", mask);
+    document.getElementById("mask").innerHTML = mask; 
+  }
+
+
 
   document.getElementById("clickQuiz").onclick = doQuiz;
   initiateQuiz();
-
+  initiateMask();

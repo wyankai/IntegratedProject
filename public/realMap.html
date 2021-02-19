@@ -78,7 +78,7 @@
               required
             />
           </div>
-          <button type="submit" class="btn"><i class="fa fa-comment "></i></button>
+          <button type="submit" class="btn" id="load"><i class="fa fa-comment "></i></button>
         </form>
       </main>  
       <a href = profile.html><i class="fa fa-user "></i></a>
@@ -131,6 +131,17 @@
         //calling the function
         getCountry("Singapore")
       })
+
+      $('#load').on('click', function(){
+          $('input[type="text"]').each(function(){    
+              var id = $(this).attr('id');
+              var value = localStorage.getItem(id);
+              
+              $(this).val(value);
+              
+          }); 
+        });
+
     </script>
 
     <script src="js/script.js"></script>

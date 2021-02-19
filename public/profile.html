@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+
        <!-- Add icon library -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- For theme buttons. Ajax to change the colour of the backgrounds etc -->
@@ -21,30 +22,26 @@
   
         <!-- To run code the moment the website loads-->
         <body onLoad="toggleDarkMode()"></body>
-
+        
+        <style>
+          #usernameChange{
+            display:none;
+            margin-left: 37px;
+          }
+        </style>
         <div class= "body">
             <div class="profileBody">
                 <img class="profilePicture" src="Images/profile picture.png" alt="placeholderImage">
-                  <p><a id="username"><b>Guest123</b></a></p>
-                  <main class="join-main">
-                    <form action="chat.html">
-                      <div class="form-control">
-                        <label for="username">Username</label>
-                        <input
-                          type="text"
-                          name="username"
-                          id="username"
-                          placeholder="Enter chat username..."
-                          required
-                        />
-                      </div>
-                      <button type="submit" class="btn">Submit</button>
-                    </form>
-                  </main>
-
-                  <input type="text" id="username" name="username"> 
-                  <button id="save">save</button>
-                  <button id="load">load</button>
+                  <div class ="usernameContainer">
+                    <p><a id="username"><b>Guest123</b></a></p>
+                    <button id="loadA" class ="change"><i class ="fa fa-pencil-square-o"></i></button>
+                  </div>
+                  <div id="usernameChange">
+                    <input type="text" id="username" name="username" > 
+                    <button id="save" >save</button>
+                  </div>
+                  
+                  
                 
                 <table>
                     <tr>
@@ -53,7 +50,7 @@
                     </tr>
                     <tr>
                         <td>Mask Collected</td>
-                        <td><p><a id="masks">0</a></p></td>
+                        <td><p><a id="mask">0</a></p></td>
                     </tr>
                     <tr>
                         <td>Live Saved</td>
@@ -82,29 +79,34 @@
               var id = $(this).attr('id');
               var value = $(this).val();
             localStorage.setItem(id, value);
-              
+            window.location.reload();    
           });   
         });
 
-        $('#load').on('click', function(){
+        $('input[type="text"]').each(function(){    
+              var id = $(this).attr('id');
+              var value = localStorage.getItem(id);
+              $(this).val(value);
+              document.getElementById("username").innerHTML = value; 
+              
+          }); 
+
+        $('#loadA').on('click', function(){
           $('input[type="text"]').each(function(){    
               var id = $(this).attr('id');
               var value = localStorage.getItem(id);
-              
               $(this).val(value);
-              
+
+              var x = document.getElementById("usernameChange");
+              if (window.getComputedStyle(x).display === "none") {
+                x.style.display = "block";
+              }
+              else{
+                x.style.display = "none";
+              }
           }); 
         });
 
-        function load(){
-          $('input[type="text"]').each(function(){    
-              var id = $(this).attr('id');
-              var value = localStorage.getItem(id);
-              
-              $(this).val(value);
-              
-          }); 
-        };
       </script>
   
     <script src="js/script.js"></script>
